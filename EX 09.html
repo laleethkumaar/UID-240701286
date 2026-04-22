@@ -90,21 +90,18 @@
       let emailError = document.getElementById('emailError');
       let phoneError = document.getElementById('phoneError');
 
-      // Clear previous error messages
+      
       emailError.textContent = '';
       phoneError.textContent = '';
 
-      // Validate email
       if (!validator.isEmail(email)) {
         emailError.textContent = 'Please enter a valid email address.';
       }
 
-      // Validate phone number
       if (!validator.isMobilePhone(phone, 'any')) {
         phoneError.textContent = 'Please enter a valid phone number.';
       }
 
-      // If no errors, submit the form (for demonstration purposes, we'll just log the values)
       if (validator.isEmail(email) && validator.isMobilePhone(phone, 'any')) {
         console.log('Email:', email);
         console.log('Phone:', phone);
